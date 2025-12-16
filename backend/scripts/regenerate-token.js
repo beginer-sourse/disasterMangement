@@ -19,7 +19,12 @@ const User = mongoose.model('User', userSchema);
 
 async function regenerateToken(userIdentifier) {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || 'MONGODB_URI_REQUIRED_FROM_ENV');
+    if (!process.env.MONGODB_URI) {
+      console.error('❌ Error: MONGODB_URI environment variable is required');
+      console.error('Please set MONGODB_URI in your .env file');
+      process.exit(1);
+    }
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log('Connected to MongoDB');
 
     // Try to find user by email first, then by name

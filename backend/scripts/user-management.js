@@ -18,7 +18,12 @@ const User = mongoose.model('User', userSchema);
 
 async function listUsers() {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || 'MONGODB_URI_REQUIRED_FROM_ENV');
+    if (!process.env.MONGODB_URI) {
+      console.error('❌ Error: MONGODB_URI environment variable is required');
+      console.error('Please set MONGODB_URI in your .env file');
+      process.exit(1);
+    }
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log('Connected to MongoDB\n');
 
     const users = await User.find({}, 'name email role createdAt lastLoginAt');
@@ -45,7 +50,12 @@ async function listUsers() {
 
 async function updateUserRole(userIdentifier, newRole) {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || 'MONGODB_URI_REQUIRED_FROM_ENV');
+    if (!process.env.MONGODB_URI) {
+      console.error('❌ Error: MONGODB_URI environment variable is required');
+      console.error('Please set MONGODB_URI in your .env file');
+      process.exit(1);
+    }
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log('Connected to MongoDB');
 
     if (!['user', 'admin'].includes(newRole)) {
@@ -90,7 +100,12 @@ async function updateUserRole(userIdentifier, newRole) {
 
 async function createAdminUser(name, email, password) {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || 'MONGODB_URI_REQUIRED_FROM_ENV');
+    if (!process.env.MONGODB_URI) {
+      console.error('❌ Error: MONGODB_URI environment variable is required');
+      console.error('Please set MONGODB_URI in your .env file');
+      process.exit(1);
+    }
+    await mongoose.connect(process.env.MONGODB_URI);
     console.log('Connected to MongoDB');
 
     // Check if user already exists

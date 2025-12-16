@@ -112,7 +112,7 @@ PORT=5000
 NODE_ENV=development
 
 # MongoDB Atlas Connection
-MONGODB_URI=MONGODB_URI_REQUIRED_FROM_ENV
+MONGODB_URI=write_mongoDBConnection
 
 # JWT Configuration
 JWT_SECRET=disaster-alert-super-secret-jwt-key-2024

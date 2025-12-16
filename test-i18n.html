@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multilingual Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .language-selector {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .language-selector button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .language-selector button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        .language-selector button.active {
+            background: rgba(255, 255, 255, 0.4);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+        .content {
+            text-align: center;
+        }
+        .feature {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #ff6b6b;
+        }
+        .feature h3 {
+            margin-top: 0;
+            color: #ff6b6b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Multilingual Disaster Reporting Platform</h1>
+        
+        <div class="language-selector">
+            <button onclick="changeLanguage('en')" id="btn-en" class="active">English</button>
+            <button onclick="changeLanguage('hi')" id="btn-hi">हिन्दी</button>
+        </div>
+        
+        <div class="content">
+            <div class="feature">
+                <h3 id="feature1-title">Real-time Monitoring</h3>
+                <p id="feature1-desc">Track disaster incidents and emergency responses in real-time with live updates and notifications.</p>
+            </div>
+            
+            <div class="feature">
+                <h3 id="feature2-title">Community Reporting</h3>
+                <p id="feature2-desc">Citizens can report disasters, upload photos, and provide critical information to help emergency responders.</p>
+            </div>
+            
+            <div class="feature">
+                <h3 id="feature3-title">Multi-language Support</h3>
+                <p id="feature3-desc">Available in English and Hindi to serve diverse communities and ensure accessibility for all users.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                title: "Multilingual Disaster Reporting Platform",
+                feature1Title: "Real-time Monitoring",
+                feature1Desc: "Track disaster incidents and emergency responses in real-time with live updates and notifications.",
+                feature2Title: "Community Reporting",
+                feature2Desc: "Citizens can report disasters, upload photos, and provide critical information to help emergency responders.",
+                feature3Title: "Multi-language Support",
+                feature3Desc: "Available in English and Hindi to serve diverse communities and ensure accessibility for all users."
+            },
+            hi: {
+                title: "बहुभाषी आपदा रिपोर्टिंग प्लेटफॉर्म",
+                feature1Title: "रियल-टाइम मॉनिटरिंग",
+                feature1Desc: "लाइव अपडेट और सूचनाओं के साथ आपदा घटनाओं और आपातकालीन प्रतिक्रियाओं को रियल-टाइम में ट्रैक करें।",
+                feature2Title: "समुदाय रिपोर्टिंग",
+                feature2Desc: "नागरिक आपदाओं की रिपोर्ट कर सकते हैं, तस्वीरें अपलोड कर सकते हैं, और आपातकालीन प्रतिक्रियाकर्ताओं की मदद के लिए महत्वपूर्ण जानकारी प्रदान कर सकते हैं।",
+                feature3Title: "बहुभाषी समर्थन",
+                feature3Desc: "विविध समुदायों की सेवा के लिए अंग्रेजी और हिंदी में उपलब्ध है और सभी उपयोगकर्ताओं के लिए पहुंच सुनिश्चित करता है।"
+            }
+        };
+
+        function changeLanguage(lang) {
+            // Update active button
+            document.querySelectorAll('.language-selector button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(`btn-${lang}`).classList.add('active');
+            
+            // Update content
+            const t = translations[lang];
+            document.getElementById('title').textContent = t.title;
+            document.getElementById('feature1-title').textContent = t.feature1Title;
+            document.getElementById('feature1-desc').textContent = t.feature1Desc;
+            document.getElementById('feature2-title').textContent = t.feature2Title;
+            document.getElementById('feature2-desc').textContent = t.feature2Desc;
+            document.getElementById('feature3-title').textContent = t.feature3Title;
+            document.getElementById('feature3-desc').textContent = t.feature3Desc;
+            
+            // Save language preference
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        // Load saved language preference
+        const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+        changeLanguage(savedLang);
+    </script>
+</body>
+</html>

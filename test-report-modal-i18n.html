@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Modal i18n Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .language-selector {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .language-selector button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .language-selector button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        .language-selector button.active {
+            background: rgba(255, 255, 255, 0.4);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+        .test-section {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #4CAF50;
+        }
+        .test-section h3 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+        .form-field {
+            margin: 15px 0;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 5px;
+        }
+        .form-field label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-field input, .form-field select, .form-field textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        .form-field input::placeholder, .form-field textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .dropdown-options {
+            margin-top: 10px;
+        }
+        .dropdown-option {
+            padding: 5px 10px;
+            margin: 2px 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        .validation-message {
+            color: #ff6b6b;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .success-message {
+            color: #4CAF50;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Report Modal i18n Test</h1>
+        
+        <div class="language-selector">
+            <button onclick="changeLanguage('en')" id="btn-en" class="active">English</button>
+            <button onclick="changeLanguage('hi')" id="btn-hi">हिन्दी</button>
+            <button onclick="changeLanguage('ta')" id="btn-ta">தமிழ்</button>
+        </div>
+        
+        <div class="test-section">
+            <h3 id="disaster-info-title">Disaster Information</h3>
+            
+            <div class="form-field">
+                <label id="report-title-label">Report Title *</label>
+                <input type="text" id="report-title" placeholder="Brief title describing the situation">
+            </div>
+            
+            <div class="form-field">
+                <label id="disaster-type-label">Disaster Type *</label>
+                <select id="disaster-type">
+                    <option value="">Select disaster type</option>
+                </select>
+                <div class="dropdown-options" id="disaster-type-options"></div>
+            </div>
+            
+            <div class="form-field">
+                <label id="severity-label">Severity Level *</label>
+                <select id="severity-level">
+                    <option value="">Select severity</option>
+                </select>
+                <div class="dropdown-options" id="severity-options"></div>
+            </div>
+            
+            <div class="form-field">
+                <label id="description-label">Description *</label>
+                <textarea id="description" rows="3" placeholder="Provide detailed description..."></textarea>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3 id="location-info-title">Location Information</h3>
+            
+            <div class="form-field">
+                <label id="location-label">Location/Address</label>
+                <input type="text" id="location" placeholder="City, State or specific address">
+            </div>
+            
+            <div class="form-field">
+                <label id="gps-label">GPS Coordinates *</label>
+                <button id="get-location-btn" style="background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.3); color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-bottom: 10px;">Get Current Location</button>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <div>
+                        <label id="latitude-label">Latitude</label>
+                        <input type="number" id="latitude" placeholder="e.g., 40.7128">
+                    </div>
+                    <div>
+                        <label id="longitude-label">Longitude</label>
+                        <input type="number" id="longitude" placeholder="e.g., -74.0060">
+                    </div>
+                </div>
+                <p id="coordinates-note" style="font-size: 12px; margin-top: 10px; color: rgba(255, 255, 255, 0.8);"></p>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3 id="media-title">Media Upload (Optional)</h3>
+            <div style="border: 2px dashed rgba(255, 255, 255, 0.3); padding: 20px; text-align: center; border-radius: 8px;">
+                <p id="drop-files-text">Drop files here or click to upload</p>
+                <p id="supported-formats" style="font-size: 12px; color: rgba(255, 255, 255, 0.7);">Images (JPEG, PNG, WebP) or Videos (MP4, MOV) up to 10MB</p>
+                <button id="choose-file-btn" style="background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.3); color: white; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-top: 10px;">Choose File</button>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h3>Validation Messages Test</h3>
+            <div class="validation-message" id="validation-fill-required">Please fill in all required fields</div>
+            <div class="validation-message" id="validation-location">Please enter a location/address for your report</div>
+            <div class="validation-message" id="validation-coordinates">Please provide GPS coordinates by clicking "Get Current Location" or entering them manually</div>
+            <div class="validation-message" id="validation-valid-coordinates">Please enter valid GPS coordinates</div>
+            <div class="validation-message" id="validation-india-boundaries">Coordinates must be within India boundaries (6-37°N, 68-97°E). Please check your location.</div>
+            <div class="validation-message" id="validation-login">Please log in to submit a report</div>
+            <div class="validation-message" id="validation-file-size">File size must be less than 10MB</div>
+            <div class="validation-message" id="validation-file-type">Please upload an image (JPEG, PNG, WebP) or video (MP4, MOV)</div>
+            <div class="success-message" id="success-location">Location captured successfully</div>
+            <div class="success-message" id="success-report">Report submitted successfully! Our team will review it shortly.</div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <button id="submit-btn" style="background: #ff6b6b; border: none; color: white; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-size: 16px; margin-right: 10px;">Submit Report</button>
+            <button id="cancel-btn" style="background: rgba(255, 255, 255, 0.2); border: 1px solid rgba(255, 255, 255, 0.3); color: white; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-size: 16px;">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                title: "Report Modal i18n Test",
+                disasterInfoTitle: "Disaster Information",
+                locationInfoTitle: "Location Information",
+                mediaTitle: "Media Upload (Optional)",
+                reportTitle: "Report Title *",
+                reportTitlePlaceholder: "Brief title describing the situation",
+                disasterType: "Disaster Type *",
+                selectDisasterType: "Select disaster type",
+                severityLevel: "Severity Level *",
+                selectSeverity: "Select severity",
+                description: "Description *",
+                descriptionPlaceholder: "Provide detailed description...",
+                locationAddress: "Location/Address",
+                locationPlaceholder: "City, State or specific address",
+                gpsCoordinates: "GPS Coordinates *",
+                getCurrentLocation: "Get Current Location",
+                latitude: "Latitude",
+                longitude: "Longitude",
+                latitudePlaceholder: "e.g., 40.7128",
+                longitudePlaceholder: "e.g., -74.0060",
+                coordinatesNote: "Required: Enter coordinates manually or use the \"Get Current Location\" button to automatically detect your position. This will help us display your report on the map.",
+                coordinatesBoundaryNote: "Note: Coordinates must be within India boundaries (6-37°N, 68-97°E).",
+                dropFilesHere: "Drop files here or click to upload",
+                supportedFormats: "Images (JPEG, PNG, WebP) or Videos (MP4, MOV) up to 10MB",
+                chooseFile: "Choose File",
+                submitReport: "Submit Report",
+                cancel: "Cancel",
+                submitting: "Submitting...",
+                disasterTypes: {
+                    flood: "Flood",
+                    cyclone: "Cyclone",
+                    tsunami: "Tsunami",
+                    oilSpill: "Oil Spill",
+                    coastalErosion: "Coastal Erosion",
+                    highWaves: "High Waves",
+                    stormSurge: "Storm Surge",
+                    waterPollution: "Water Pollution",
+                    marineDebris: "Marine Debris",
+                    other: "Other"
+                },
+                severityLevels: {
+                    low: "Low",
+                    medium: "Medium",
+                    high: "High",
+                    critical: "Critical"
+                },
+                validation: {
+                    fillRequiredFields: "Please fill in all required fields",
+                    enterLocation: "Please enter a location/address for your report",
+                    provideCoordinates: "Please provide GPS coordinates by clicking \"Get Current Location\" or entering them manually",
+                    validCoordinates: "Please enter valid GPS coordinates",
+                    coordinatesWithinIndia: "Coordinates must be within India boundaries (6-37°N, 68-97°E). Please check your location.",
+                    loginRequired: "Please log in to submit a report",
+                    fileSizeLimit: "File size must be less than 10MB",
+                    invalidFileType: "Please upload an image (JPEG, PNG, WebP) or video (MP4, MOV)",
+                    locationCaptured: "Location captured successfully",
+                    reportSubmittedSuccess: "Report submitted successfully! Our team will review it shortly."
+                }
+            },
+            hi: {
+                title: "रिपोर्ट मॉडल i18n टेस्ट",
+                disasterInfoTitle: "आपदा जानकारी",
+                locationInfoTitle: "स्थान जानकारी",
+                mediaTitle: "मीडिया अपलोड (वैकल्पिक)",
+                reportTitle: "रिपोर्ट शीर्षक *",
+                reportTitlePlaceholder: "स्थिति का संक्षिप्त शीर्षक",
+                disasterType: "आपदा प्रकार *",
+                selectDisasterType: "आपदा प्रकार चुनें",
+                severityLevel: "गंभीरता स्तर *",
+                selectSeverity: "गंभीरता चुनें",
+                description: "विवरण *",
+                descriptionPlaceholder: "विस्तृत विवरण प्रदान करें...",
+                locationAddress: "स्थान/पता",
+                locationPlaceholder: "शहर, राज्य या विशिष्ट पता",
+                gpsCoordinates: "GPS निर्देशांक *",
+                getCurrentLocation: "वर्तमान स्थान प्राप्त करें",
+                latitude: "अक्षांश",
+                longitude: "देशांतर",
+                latitudePlaceholder: "जैसे, 40.7128",
+                longitudePlaceholder: "जैसे, -74.0060",
+                coordinatesNote: "आवश्यक: निर्देशांक मैन्युअल रूप से दर्ज करें या अपनी स्थिति का स्वचालित रूप से पता लगाने के लिए \"वर्तमान स्थान प्राप्त करें\" बटन का उपयोग करें। यह हमें आपकी रिपोर्ट को मैप पर प्रदर्शित करने में मदद करेगा।",
+                coordinatesBoundaryNote: "नोट: निर्देशांक भारत की सीमाओं के भीतर होने चाहिए (6-37°N, 68-97°E)।",
+                dropFilesHere: "फाइलें यहां ड्रॉप करें या अपलोड करने के लिए क्लिक करें",
+                supportedFormats: "छवियां (JPEG, PNG, WebP) या वीडियो (MP4, MOV) अधिकतम 10MB",
+                chooseFile: "फाइल चुनें",
+                submitReport: "रिपोर्ट जमा करें",
+                cancel: "रद्द करें",
+                submitting: "जमा हो रहा है...",
+                disasterTypes: {
+                    flood: "बाढ़",
+                    cyclone: "चक्रवात",
+                    tsunami: "सुनामी",
+                    oilSpill: "तेल रिसाव",
+                    coastalErosion: "तटीय कटाव",
+                    highWaves: "उच्च लहरें",
+                    stormSurge: "तूफानी ज्वार",
+                    waterPollution: "जल प्रदूषण",
+                    marineDebris: "समुद्री मलबा",
+                    other: "अन्य"
+                },
+                severityLevels: {
+                    low: "कम",
+                    medium: "मध्यम",
+                    high: "उच्च",
+                    critical: "गंभीर"
+                },
+                validation: {
+                    fillRequiredFields: "कृपया सभी आवश्यक फ़ील्ड भरें",
+                    enterLocation: "कृपया अपनी रिपोर्ट के लिए स्थान/पता दर्ज करें",
+                    provideCoordinates: "कृपया \"वर्तमान स्थान प्राप्त करें\" पर क्लिक करके या मैन्युअल रूप से दर्ज करके GPS निर्देशांक प्रदान करें",
+                    validCoordinates: "कृपया वैध GPS निर्देशांक दर्ज करें",
+                    coordinatesWithinIndia: "निर्देशांक भारत की सीमाओं के भीतर होने चाहिए (6-37°N, 68-97°E)। कृपया अपना स्थान जांचें।",
+                    loginRequired: "रिपोर्ट जमा करने के लिए कृपया लॉग इन करें",
+                    fileSizeLimit: "फाइल का आकार 10MB से कम होना चाहिए",
+                    invalidFileType: "कृपया एक छवि (JPEG, PNG, WebP) या वीडियो (MP4, MOV) अपलोड करें",
+                    locationCaptured: "स्थान सफलतापूर्वक कैप्चर किया गया",
+                    reportSubmittedSuccess: "रिपोर्ट सफलतापूर्वक जमा की गई! हमारी टीम इसे जल्द ही समीक्षा करेगी।"
+                }
+            },
+            ta: {
+                title: "அறிக்கை மாடல் i18n சோதனை",
+                disasterInfoTitle: "பேரிடர் தகவல்",
+                locationInfoTitle: "இருப்பிட தகவல்",
+                mediaTitle: "மீடியா பதிவேற்றம் (விருப்பமானது)",
+                reportTitle: "அறிக்கை தலைப்பு *",
+                reportTitlePlaceholder: "சூழ்நிலையை விவரிக்கும் சுருக்கமான தலைப்பு",
+                disasterType: "பேரிடர் வகை *",
+                selectDisasterType: "பேரிடர் வகையைத் தேர்ந்தெடுக்கவும்",
+                severityLevel: "தீவிர நிலை *",
+                selectSeverity: "தீவிரத்தைத் தேர்ந்தெடுக்கவும்",
+                description: "விளக்கம் *",
+                descriptionPlaceholder: "விரிவான விளக்கத்தை வழங்கவும்...",
+                locationAddress: "இருப்பிடம்/முகவரி",
+                locationPlaceholder: "நகரம், மாநிலம் அல்லது குறிப்பிட்ட முகவரி",
+                gpsCoordinates: "GPS ஆயங்கள் *",
+                getCurrentLocation: "தற்போதைய இருப்பிடத்தைப் பெறவும்",
+                latitude: "அட்சரேகை",
+                longitude: "தீர்க்கரேகை",
+                latitudePlaceholder: "எ.கா., 40.7128",
+                longitudePlaceholder: "எ.கா., -74.0060",
+                coordinatesNote: "தேவையானது: ஆயங்களை கைமுறையாக உள்ளிடவும் அல்லது உங்கள் நிலையை தானாகவே கண்டறிய \"தற்போதைய இருப்பிடத்தைப் பெறவும்\" பொத்தானைப் பயன்படுத்தவும்। இது உங்கள் அறிக்கையை வரைபடத்தில் காட்ட உதவும்।",
+                coordinatesBoundaryNote: "குறிப்பு: ஆயங்கள் இந்திய எல்லைகளுக்குள் இருக்க வேண்டும் (6-37°N, 68-97°E).",
+                dropFilesHere: "கோப்புகளை இங்கே விடவும் அல்லது பதிவேற்ற கிளிக் செய்யவும்",
+                supportedFormats: "படங்கள் (JPEG, PNG, WebP) அல்லது வீடியோக்கள் (MP4, MOV) அதிகபட்சம் 10MB",
+                chooseFile: "கோப்பைத் தேர்ந்தெடுக்கவும்",
+                submitReport: "அறிக்கையை சமர்ப்பி",
+                cancel: "ரத்துசெய்",
+                submitting: "சமர்ப்பிக்கப்படுகிறது...",
+                disasterTypes: {
+                    flood: "வெள்ளம்",
+                    cyclone: "சூறாவளி",
+                    tsunami: "ஆழிப்பேரலை",
+                    oilSpill: "எண்ணெய் கசிவு",
+                    coastalErosion: "கடற்கரை அரிப்பு",
+                    highWaves: "உயர் அலைகள்",
+                    stormSurge: "புயல் அலை",
+                    waterPollution: "நீர் மாசுபாடு",
+                    marineDebris: "கடல் குப்பை",
+                    other: "மற்றவை"
+                },
+                severityLevels: {
+                    low: "குறைந்த",
+                    medium: "நடுத்தர",
+                    high: "உயர்",
+                    critical: "முக்கிய"
+                },
+                validation: {
+                    fillRequiredFields: "தயவுசெய்து அனைத்து தேவையான புலங்களையும் நிரப்பவும்",
+                    enterLocation: "தயவுசெய்து உங்கள் அறிக்கைக்கு இருப்பிடம்/முகவரியை உள்ளிடவும்",
+                    provideCoordinates: "தயவுசெய்து \"தற்போதைய இருப்பிடத்தைப் பெறவும்\" கிளிக் செய்து அல்லது கைமுறையாக உள்ளிட்டு GPS ஆயங்களை வழங்கவும்",
+                    validCoordinates: "தயவுசெய்து சரியான GPS ஆயங்களை உள்ளிடவும்",
+                    coordinatesWithinIndia: "ஆயங்கள் இந்திய எல்லைகளுக்குள் இருக்க வேண்டும் (6-37°N, 68-97°E). தயவுசெய்து உங்கள் இருப்பிடத்தை சரிபார்க்கவும்.",
+                    loginRequired: "அறிக்கையை சமர்ப்பிக்க தயவுசெய்து உள்நுழையவும்",
+                    fileSizeLimit: "கோப்பு அளவு 10MB க்கும் குறைவாக இருக்க வேண்டும்",
+                    invalidFileType: "தயவுசெய்து படம் (JPEG, PNG, WebP) அல்லது வீடியோ (MP4, MOV) பதிவேற்றவும்",
+                    locationCaptured: "இருப்பிடம் வெற்றிகரமாக பிடிக்கப்பட்டது",
+                    reportSubmittedSuccess: "அறிக்கை வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது! எங்கள் குழு விரைவில் அதை மறுஆய்வு செய்யும்."
+                }
+            }
+        };
+
+        function changeLanguage(lang) {
+            // Update active button
+            document.querySelectorAll('.language-selector button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(`btn-${lang}`).classList.add('active');
+            
+            // Update content
+            const t = translations[lang];
+            
+            // Update main elements
+            document.getElementById('title').textContent = t.title;
+            document.getElementById('disaster-info-title').textContent = t.disasterInfoTitle;
+            document.getElementById('location-info-title').textContent = t.locationInfoTitle;
+            document.getElementById('media-title').textContent = t.mediaTitle;
+            
+            // Update form labels and placeholders
+            document.getElementById('report-title-label').textContent = t.reportTitle;
+            document.getElementById('report-title').placeholder = t.reportTitlePlaceholder;
+            document.getElementById('disaster-type-label').textContent = t.disasterType;
+            document.getElementById('select-disaster-type').textContent = t.selectDisasterType;
+            document.getElementById('severity-label').textContent = t.severityLevel;
+            document.getElementById('select-severity').textContent = t.selectSeverity;
+            document.getElementById('description-label').textContent = t.description;
+            document.getElementById('description').placeholder = t.descriptionPlaceholder;
+            document.getElementById('location-label').textContent = t.locationAddress;
+            document.getElementById('location').placeholder = t.locationPlaceholder;
+            document.getElementById('gps-label').textContent = t.gpsCoordinates;
+            document.getElementById('get-location-btn').textContent = t.getCurrentLocation;
+            document.getElementById('latitude-label').textContent = t.latitude;
+            document.getElementById('longitude-label').textContent = t.longitude;
+            document.getElementById('latitude').placeholder = t.latitudePlaceholder;
+            document.getElementById('longitude').placeholder = t.longitudePlaceholder;
+            document.getElementById('coordinates-note').innerHTML = `<strong>${t.required}:</strong> ${t.coordinatesNote}<br><strong>${t.note}:</strong> ${t.coordinatesBoundaryNote}`;
+            document.getElementById('drop-files-text').textContent = t.dropFilesHere;
+            document.getElementById('supported-formats').textContent = t.supportedFormats;
+            document.getElementById('choose-file-btn').textContent = t.chooseFile;
+            document.getElementById('submit-btn').textContent = t.submitReport;
+            document.getElementById('cancel-btn').textContent = t.cancel;
+            
+            // Update disaster type options
+            const disasterTypeSelect = document.getElementById('disaster-type');
+            disasterTypeSelect.innerHTML = `<option value="">${t.selectDisasterType}</option>`;
+            Object.entries(t.disasterTypes).forEach(([key, value]) => {
+                const option = document.createElement('option');
+                option.value = key;
+                option.textContent = value;
+                disasterTypeSelect.appendChild(option);
+            });
+            
+            // Update severity level options
+            const severitySelect = document.getElementById('severity-level');
+            severitySelect.innerHTML = `<option value="">${t.selectSeverity}</option>`;
+            Object.entries(t.severityLevels).forEach(([key, value]) => {
+                const option = document.createElement('option');
+                option.value = key.toUpperCase();
+                option.textContent = value;
+                severitySelect.appendChild(option);
+            });
+            
+            // Update validation messages
+            document.getElementById('validation-fill-required').textContent = t.validation.fillRequiredFields;
+            document.getElementById('validation-location').textContent = t.validation.enterLocation;
+            document.getElementById('validation-coordinates').textContent = t.validation.provideCoordinates;
+            document.getElementById('validation-valid-coordinates').textContent = t.validation.validCoordinates;
+            document.getElementById('validation-india-boundaries').textContent = t.validation.coordinatesWithinIndia;
+            document.getElementById('validation-login').textContent = t.validation.loginRequired;
+            document.getElementById('validation-file-size').textContent = t.validation.fileSizeLimit;
+            document.getElementById('validation-file-type').textContent = t.validation.invalidFileType;
+            document.getElementById('success-location').textContent = t.validation.locationCaptured;
+            document.getElementById('success-report').textContent = t.validation.reportSubmittedSuccess;
+            
+            // Save language preference
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        // Load saved language preference
+        const savedLang = localStorage.getItem('selectedLanguage') || 'en';
+        changeLanguage(savedLang);
+    </script>
+</body>
+</html>

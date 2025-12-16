@@ -1,0 +1,95 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Jalsaathi Platform</title>
+      <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+      <style>
+        /* Custom styles to ensure jalsaathi name is properly displayed */
+        [data-testid*="name"], .chat-header, .bot-name, [class*="name"], [class*="header"] {
+          font-weight: 600;
+          color: #1f2937;
+        }
+        
+        /* Ensure the name change is visible */
+        .n8n-chat-widget * {
+          transition: all 0.3s ease;
+        }
+      </style>
+    </head>
+
+    <body>
+      <div id="root"></div>
+      <script type="module" src="/src/main.tsx"></script>
+      <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+          webhookUrl: 'http://localhost:5678/webhook/dc80564e-5584-4e8d-9a68-fe5c38f4d184/chat',
+          // Custom configuration to override bot name
+          theme: {
+            primaryColor: '#3b82f6',
+            textColor: '#1f2937',
+            backgroundColor: '#ffffff'
+          }
+        });
+
+        // Function to replace Nathan with jalsaathi
+        function replaceBotName() {
+          // Look for elements that might contain the bot name
+          const elements = document.querySelectorAll('[data-testid*="name"], .chat-header, .bot-name, [class*="name"], [class*="header"], [class*="title"]');
+          elements.forEach(element => {
+            if (element.textContent && element.textContent.includes('Nathan')) {
+              element.textContent = element.textContent.replace(/Nathan/g, 'jalsaathi');
+            }
+          });
+          
+          // Also check for any text nodes
+          const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            null,
+            false
+          );
+          
+          let node;
+          while (node = walker.nextNode()) {
+            if (node.textContent && node.textContent.includes('Nathan')) {
+              node.textContent = node.textContent.replace(/Nathan/g, 'jalsaathi');
+            }
+          }
+        }
+
+        // Override bot name after chat widget loads
+        setTimeout(() => {
+          // Initial replacement
+          replaceBotName();
+          
+          // Set up observer for dynamic content
+          const observer = new MutationObserver((mutations) => {
+            let shouldReplace = false;
+            mutations.forEach((mutation) => {
+              if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                shouldReplace = true;
+              }
+            });
+            
+            if (shouldReplace) {
+              setTimeout(replaceBotName, 100);
+            }
+          });
+          
+          observer.observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+          
+          // Also run replacement periodically to catch any missed instances
+          setInterval(replaceBotName, 3000);
+        }, 2000);
+      </script>
+    </body>
+  </html>
+  

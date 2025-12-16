@@ -1,0 +1,1088 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "refresh": "Refresh",
+    "view": "View",
+    "details": "Details",
+    "more": "More",
+    "less": "Less",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK",
+    "current": "Current",
+    "active": "Active",
+    "required": "Required",
+    "note": "Note"
+  },
+  "filters": {
+    "state": "State Filter",
+    "selectState": "Select a state",
+    "allStates": "All States"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "liveMap": "Live Map",
+    "disasterInfo": "Disaster Info",
+    "faq": "FAQ",
+    "profile": "Profile",
+    "reports": "Reports",
+    "analytics": "Analytics",
+    "map": "Map",
+    "admin": "Admin",
+    "login": "Login",
+    "logout": "Logout",
+    "reportDisaster": "Report Disaster",
+    "communitySafety": "Community Safety"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome to Jalsaathi",
+    "subtitle": "Your community safety platform",
+    "activeReports": "Active Reports",
+    "verifiedIncidents": "Verified Incidents",
+    "activeCitizens": "Active Citizens",
+    "avgResponseTime": "Avg Response Time",
+    "alertsToday": "Alerts Today",
+    "recentActivity": "Recent Activity",
+    "quickActions": "Quick Actions",
+    "emergencyContacts": "Emergency Contacts",
+    "weatherAlerts": "Weather Alerts",
+    "trendingUp": "Trending Up",
+    "trendingDown": "Trending Down",
+    "noData": "No data available",
+    "lastUpdated": "Last updated",
+    "viewAll": "View All",
+    "safetyInformation": "Safety Information",
+    "todaysSummary": "Today's Summary",
+    "activeAlerts": "Active Alerts",
+    "newReports": "New Reports",
+    "responseTeams": "Response Teams"
+  },
+  "map": {
+    "title": "Live Map",
+    "subtitle": "Real-time disaster reports and incidents",
+    "legend": "Legend",
+    "highSeverity": "High Severity",
+    "mediumSeverity": "Medium Severity",
+    "lowSeverity": "Low Severity",
+    "verified": "Verified",
+    "unverified": "Unverified",
+    "myLocation": "My Location",
+    "searchLocation": "Search location...",
+    "noReports": "No reports in this area",
+    "loadingMap": "Loading map...",
+    "mapError": "Error loading map"
+  },
+  "reports": {
+    "title": "Disaster Reports",
+    "subtitle": "Report and track disaster incidents",
+    "createReport": "Create Report",
+    "reportType": "Report Type",
+    "severity": "Severity",
+    "location": "Location",
+    "description": "Description",
+    "photos": "Photos",
+    "contactInfo": "Contact Information",
+    "anonymous": "Anonymous Report",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low",
+    "flood": "Flood",
+    "earthquake": "Earthquake",
+    "fire": "Fire",
+    "storm": "Storm",
+    "other": "Other",
+    "selectType": "Select disaster type",
+    "selectSeverity": "Select severity level",
+    "enterDescription": "Enter description...",
+    "addPhotos": "Add photos",
+    "submitReport": "Submit Report",
+    "reportSubmitted": "Report submitted successfully",
+    "reportError": "Error submitting report",
+    "noReports": "No reports found",
+    "filterBy": "Filter by",
+    "sortBy": "Sort by",
+    "date": "Date",
+    "severityLevel": "Severity Level",
+    "status": "Status",
+    "verified": "Verified",
+    "pending": "Pending",
+    "resolved": "Resolved"
+  },
+  "profile": {
+    "title": "Profile",
+    "subtitle": "Manage your account and preferences",
+    "personalInfo": "Personal Information",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "avatar": "Avatar",
+    "changePassword": "Change Password",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "preferences": "Preferences",
+    "language": "Language",
+    "notifications": "Notifications",
+    "emailNotifications": "Email Notifications",
+    "smsNotifications": "SMS Notifications",
+    "pushNotifications": "Push Notifications",
+    "saveChanges": "Save Changes",
+    "profileUpdated": "Profile updated successfully",
+    "profileError": "Error updating profile"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "subtitle": "Manage users and system settings",
+    "userManagement": "User Management",
+    "systemSettings": "System Settings",
+    "reportsManagement": "Reports Management",
+    "analytics": "Analytics",
+    "users": "Users",
+    "roles": "Roles",
+    "permissions": "Permissions",
+    "settings": "Settings",
+    "backup": "Backup",
+    "logs": "Logs",
+    "addUser": "Add User",
+    "editUser": "Edit User",
+    "deleteUser": "Delete User",
+    "userRole": "User Role",
+    "admin": "Admin",
+    "moderator": "Moderator",
+    "user": "User",
+    "active": "Active",
+    "inactive": "Inactive",
+    "lastLogin": "Last Login",
+    "createdAt": "Created At"
+  },
+  "disasterInfo": {
+    "title": "Disaster Information",
+    "subtitle": "Learn about different types of disasters and safety measures",
+    "types": "Disaster Types",
+    "safetyTips": "Safety Tips",
+    "emergencyProcedures": "Emergency Procedures",
+    "preparation": "Preparation",
+    "duringDisaster": "During Disaster",
+    "afterDisaster": "After Disaster",
+    "emergencyNumbers": "Emergency Numbers",
+    "police": "Police",
+    "fire": "Fire Department",
+    "ambulance": "Ambulance",
+    "disasterHelpline": "Disaster Helpline"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about the Jalsaathi Dashboard disaster reporting platform",
+    "searchFaq": "Search FAQs...",
+    "categories": "Categories",
+    "all": "All",
+    "general": "General",
+    "reporting": "Reporting",
+    "account": "Account",
+    "community": "Community",
+    "features": "Features",
+    "admin": "Admin",
+    "security": "Security",
+    "support": "Support",
+    "technical": "Technical",
+    "noResults": "No results found",
+    "stillHaveQuestions": "Still have questions?",
+    "contactSupport": "Contact Support",
+    "questions": {
+      "whatIsJalsaathi": "What is Jalsaathi Dashboard?",
+      "whatIsJalsaathiAnswer": "Jalsaathi Dashboard is a comprehensive disaster reporting platform that allows citizens to report disasters, view real-time reports, and provides analytics for emergency response teams. It's built with modern technologies including React, TypeScript, Node.js, Express, and MongoDB Atlas to ensure reliability and scalability.",
+      "disasterTypes": "What types of disasters can I report?",
+      "disasterTypesAnswer": "You can report the following types of disasters:",
+      "severityLevels": "What are the severity levels for disaster reports?",
+      "severityLevelsAnswer": "Disaster reports are categorized into four severity levels:",
+      "createAccount": "How do I create an account?",
+      "createAccountAnswer": "Creating an account is simple and free:",
+      "submitReport": "How do I submit a disaster report?",
+      "submitReportAnswer": "To submit a disaster report:",
+      "mediaFiles": "What media files can I upload with my report?",
+      "mediaFilesAnswer": "You can upload the following types of media files:",
+      "verificationProcess": "How does the report verification process work?",
+      "verificationProcessAnswer": "All reports go through a verification process:",
+      "contactSupport": "How do I contact support?",
+      "contactSupportAnswer": "If you need help or have questions, you can contact us through:",
+      "mobileDevices": "Is the platform available on mobile devices?",
+      "mobileDevicesAnswer": "Yes! The platform is fully responsive and works on all devices including smartphones, tablets, and desktop computers. The interface automatically adapts to different screen sizes for optimal viewing and interaction. We recommend using a modern web browser for the best experience.",
+      "supportedBrowsers": "What browsers are supported?",
+      "supportedBrowsersAnswer": "The platform supports all modern web browsers including Chrome, Firefox, Safari, Edge, and Opera. We recommend using the latest version of your preferred browser for the best performance and security. JavaScript must be enabled for the platform to function properly.",
+      "canComment": "Can I comment on disaster reports?",
+      "canCommentAnswer": "Yes! You can comment on any disaster report to provide additional information, ask questions, or share updates. Comments help build a community around disaster awareness and response. You can also edit or delete your own comments if needed.",
+      "howToVote": "How do I vote on reports?",
+      "howToVoteAnswer": "You can vote on disaster reports to help indicate their accuracy and importance. Click the thumbs up or thumbs down buttons on any report. Your vote helps the community and administrators understand which reports are most reliable and urgent.",
+      "interactiveMap": "What is the interactive map feature?",
+      "interactiveMapAnswer": "The interactive map shows all verified disaster reports with color-coded markers based on severity levels. You can click on markers to view detailed information about each report, zoom in/out, and navigate to different areas. The map helps visualize disaster patterns and locations across your region.",
+      "whatAnalytics": "What analytics are available?",
+      "whatAnalyticsAnswer": "The platform provides comprehensive analytics including:",
+      "adminFeatures": "What are the admin features?",
+      "adminFeaturesAnswer": "Administrators have access to advanced features:",
+      "realTimeNotifications": "How do real-time notifications work?",
+      "realTimeNotificationsAnswer": "The platform uses WebSocket technology to provide real-time updates. You'll receive instant notifications for new disaster reports in your area, status changes to your reports, admin responses, and other important updates. Notifications appear in the notification dropdown in the top navigation bar.",
+      "dataSecurity": "Is my personal information secure?",
+      "dataSecurityAnswer": "Yes, we take security seriously and implement multiple security measures:",
+      "editDeleteReports": "Can I edit or delete my reports?",
+      "editDeleteReportsAnswer": "Yes, you can edit or delete your own reports as long as they haven't been verified by an administrator. Once a report is verified, it becomes part of the public record and cannot be modified to maintain data integrity. You can always add comments to provide updates or additional information."
+    },
+    "severity": {
+      "low": "LOW",
+      "medium": "MEDIUM", 
+      "high": "HIGH",
+      "critical": "CRITICAL",
+      "lowDesc": "- Minor impact, minimal risk",
+      "mediumDesc": "- Moderate impact, some risk",
+      "highDesc": "- Significant impact, high risk",
+      "criticalDesc": "- Severe impact, immediate danger"
+    },
+    "disasterTypes": {
+      "flood": "Flood",
+      "cyclone": "Cyclone",
+      "tsunami": "Tsunami",
+      "oilSpill": "Oil Spill",
+      "coastalErosion": "Coastal Erosion",
+      "highWaves": "High Waves",
+      "stormSurge": "Storm Surge",
+      "waterPollution": "Water Pollution",
+      "marineDebris": "Marine Debris",
+      "other": "Other"
+    },
+    "steps": {
+      "step1": "Click the \"Login\" button in the top navigation",
+      "step2": "Select the \"Register\" tab in the login modal",
+      "step3": "Fill in your details:",
+      "step4": "Click \"Register\" to create your account",
+      "step5": "You'll be automatically logged in after successful registration",
+      "reportStep1": "Make sure you're logged in to your account",
+      "reportStep2": "Click the \"Report Disaster\" button in the top navigation",
+      "reportStep3": "Fill out the report form with:",
+      "reportStep4": "Click \"Submit Report\" to send your report",
+      "reportStep5": "Your report will be reviewed by administrators"
+    },
+    "formFields": {
+      "fullName": "Full Name (required)",
+      "emailAddress": "Email Address (required, must be unique)",
+      "password": "Password (minimum 6 characters)",
+      "phoneNumber": "Phone Number (optional)",
+      "reportTitle": "Report Title (brief description)",
+      "disasterType": "Disaster Type (select from dropdown)",
+      "severityLevel": "Severity Level (Low, Medium, High, or Critical)",
+      "detailedDescription": "Detailed Description (up to 1000 characters)",
+      "location": "Location (specific address or area)",
+      "coordinates": "Coordinates (optional, for precise location)",
+      "mediaUpload": "Media Upload (photos or videos, optional)"
+    },
+    "mediaFormats": {
+      "supportedImageFormats": "Supported Image Formats:",
+      "supportedVideoFormats": "Supported Video Formats:",
+      "fileSizeLimit": "File Size Limit:",
+      "maxFileSize": "Maximum 10MB per file"
+    },
+    "contact": {
+      "email": "Email: support@jalsaathi.com",
+      "phone": "Phone: +1 (555) 123-4567",
+      "website": "Website: Create an issue in our repository",
+      "responseTime": "We typically respond within 24 hours during business days."
+    },
+    "verificationSteps": {
+      "pending": "PENDING",
+      "pendingDesc": "Your report is submitted and waiting for admin review",
+      "verified": "VERIFIED",
+      "verifiedDesc": "Admin has verified your report and it's now publicly visible",
+      "rejected": "REJECTED",
+      "rejectedDesc": "Report was rejected due to insufficient information or policy violation"
+    },
+    "analyticsCategories": {
+      "reportAnalytics": "Report Analytics:",
+      "userAnalytics": "User Analytics:",
+      "reportAnalyticsItems": [
+        "Reports by severity level",
+        "Reports by disaster type",
+        "Reports by location",
+        "Time-based trends"
+      ],
+      "userAnalyticsItems": [
+        "User activity stats",
+        "Most active reporters",
+        "Report verification rates",
+        "Community engagement"
+      ]
+    },
+    "adminCategories": {
+      "reportManagement": "Report Management:",
+      "userManagement": "User Management:",
+      "analyticsDashboard": "Analytics Dashboard:",
+      "reportManagementItems": [
+        "Verify or reject pending reports",
+        "View all reports with detailed information",
+        "Manage report status and priority"
+      ],
+      "userManagementItems": [
+        "View all registered users",
+        "Update user roles and permissions",
+        "Block or unblock users",
+        "Monitor user activity"
+      ],
+      "analyticsDashboardItems": [
+        "Comprehensive platform statistics",
+        "Real-time monitoring",
+        "Export data for analysis"
+      ]
+    },
+    "securityMeasures": [
+      "JWT Authentication: Secure token-based authentication",
+      "Password Hashing: All passwords are encrypted using bcrypt",
+      "Input Validation: All user inputs are validated and sanitized",
+      "Rate Limiting: Protection against abuse and spam",
+      "CORS Protection: Cross-origin request security",
+      "File Upload Security: Secure media upload handling",
+      "Role-based Access: Proper permission management"
+    ]
+  },
+  "states": {
+    "andhraPradesh": "Andhra Pradesh",
+    "arunachalPradesh": "Arunachal Pradesh",
+    "assam": "Assam",
+    "bihar": "Bihar",
+    "chhattisgarh": "Chhattisgarh",
+    "goa": "Goa",
+    "gujarat": "Gujarat",
+    "haryana": "Haryana",
+    "himachalPradesh": "Himachal Pradesh",
+    "jharkhand": "Jharkhand",
+    "karnataka": "Karnataka",
+    "kerala": "Kerala",
+    "madhyaPradesh": "Madhya Pradesh",
+    "maharashtra": "Maharashtra",
+    "manipur": "Manipur",
+    "meghalaya": "Meghalaya",
+    "mizoram": "Mizoram",
+    "nagaland": "Nagaland",
+    "odisha": "Odisha",
+    "punjab": "Punjab",
+    "rajasthan": "Rajasthan",
+    "sikkim": "Sikkim",
+    "tamilNadu": "Tamil Nadu",
+    "telangana": "Telangana",
+    "tripura": "Tripura",
+    "uttarPradesh": "Uttar Pradesh",
+    "uttarakhand": "Uttarakhand",
+    "westBengal": "West Bengal",
+    "andamanNicobar": "Andaman and Nicobar Islands",
+    "chandigarh": "Chandigarh",
+    "dadraNagarHaveli": "Dadra and Nagar Haveli and Daman and Diu",
+    "delhi": "Delhi",
+    "jammuKashmir": "Jammu and Kashmir",
+    "ladakh": "Ladakh",
+    "lakshadweep": "Lakshadweep",
+    "puducherry": "Puducherry"
+  },
+  "disasterInfo": {
+    "title": "Disaster Information",
+    "subtitle": "Emergency guidelines, safety tips, and preparedness information",
+    "downloadGuide": "Download Emergency Guide",
+    "tabs": {
+      "disasterTypes": "Disaster Types",
+      "emergencyKit": "Emergency Kit",
+      "evacuation": "Evacuation Centers",
+      "contacts": "Emergency Contacts"
+    },
+    "disasterTypes": {
+      "whatIs": "What is a {{disaster}}?",
+      "warningSigns": "Warning Signs",
+      "safetyTips": "Safety Tips",
+      "tsunami": {
+        "name": "Tsunami",
+        "description": "Large ocean waves caused by underwater earthquakes or landslides",
+        "warningSigns": "Warning Signs",
+        "safetyTips": "Safety Tips",
+        "warningSignsList": [
+          "Strong earthquake lasting 20+ seconds",
+          "Ocean water receding unusually far",
+          "Loud roaring sound from ocean",
+          "Unusual animal behavior"
+        ],
+        "safetyTipsList": [
+          "Move to higher ground immediately",
+          "Stay away from beaches and coastal areas",
+          "Listen to emergency broadcasts",
+          "Do not return until all-clear is given"
+        ]
+      },
+      "cyclone": {
+        "name": "Cyclone",
+        "description": "Rotating storm system with strong winds and heavy rainfall",
+        "warningSignsList": [
+          "Rapidly dropping barometric pressure",
+          "Increasing wind speeds",
+          "Heavy rainfall",
+          "Dark, threatening clouds"
+        ],
+        "safetyTipsList": [
+          "Stay indoors and away from windows",
+          "Secure loose outdoor objects",
+          "Stock up on emergency supplies",
+          "Follow evacuation orders if issued"
+        ]
+      },
+      "flood": {
+        "name": "Coastal Flooding",
+        "description": "Water overflow from ocean or rivers into normally dry areas",
+        "warningSignsList": [
+          "Rising water levels",
+          "Heavy or prolonged rainfall",
+          "Dam or levee failure warnings",
+          "Storm surge alerts"
+        ],
+        "safetyTipsList": [
+          "Move to higher ground",
+          "Avoid walking or driving through flood water",
+          "Stay informed via radio or mobile alerts",
+          "Turn off utilities if instructed"
+        ]
+      },
+      "oilSpill": {
+        "name": "Oil Spill",
+        "description": "Release of petroleum products into ocean or coastal environment",
+        "warningSignsList": [
+          "Oil sheen on water surface",
+          "Strong petroleum odor",
+          "Dead fish or marine life",
+          "Oil on beaches or shoreline"
+        ],
+        "safetyTipsList": [
+          "Avoid contact with oil or contaminated water",
+          "Report spills to authorities immediately",
+          "Keep pets and children away from affected areas",
+          "Use protective equipment if helping cleanup"
+        ]
+      }
+    },
+    "emergencyKit": {
+      "title": "Emergency Kit Checklist",
+      "subtitle": "Prepare these essential items for emergency situations",
+      "categories": {
+        "waterFood": "Water & Food",
+        "safetyTools": "Safety & Tools",
+        "personalItems": "Personal Items",
+        "clothing": "Clothing"
+      },
+      "items": {
+        "waterFood": [
+          "1 gallon water per person per day",
+          "Non-perishable food (3-day supply)",
+          "Manual can opener",
+          "Disposable plates/utensils"
+        ],
+        "safetyTools": [
+          "Flashlight with extra batteries",
+          "Battery-powered radio",
+          "First aid kit",
+          "Whistle for signaling"
+        ],
+        "personalItems": [
+          "Prescription medications",
+          "Personal hygiene items",
+          "Cash in small bills",
+          "Important documents (copies)"
+        ],
+        "clothing": [
+          "Weather-appropriate clothing",
+          "Blankets or sleeping bags",
+          "Rain gear",
+          "Sturdy shoes"
+        ]
+      },
+      "importantReminder": "Important Reminder",
+      "reminderText": "Check and update your emergency kit every 6 months. Replace expired items and update documents."
+    },
+    "evacuation": {
+      "searchPlaceholder": "Search evacuation centers by name or location...",
+      "evacuationTips": "Evacuation Tips",
+      "tips": [
+        "Know multiple routes to evacuation centers",
+        "Keep your emergency kit ready to go",
+        "Follow official evacuation orders immediately",
+        "Register with center staff upon arrival"
+      ],
+      "capacity": "Capacity",
+      "distance": "Distance",
+      "getDirections": "Get Directions",
+      "contact": "Contact"
+    },
+    "emergencyContacts": {
+      "nationalEmergency": "National Emergency",
+      "coastGuard": "Coast Guard",
+      "disasterManagement": "Disaster Management",
+      "additionalContacts": "Additional Emergency Contacts",
+      "singleEmergencyNumber": "Single emergency number for all services",
+      "marineEmergencies": "Marine emergencies & rescue",
+      "disasterResponse": "Disaster response coordination",
+      "contacts": {
+        "fireRescue": "Fire & Rescue Services",
+        "police": "Police Emergency",
+        "medical": "Medical Emergency",
+        "pollutionControl": "Pollution Control Board",
+        "meteorological": "Meteorological Department",
+        "highways": "National Highways Authority"
+      },
+      "descriptions": {
+        "fireRescue": "Fire emergencies and rescue operations",
+        "police": "Law enforcement and security",
+        "medical": "Ambulance and medical assistance",
+        "pollutionControl": "Environmental emergencies",
+        "meteorological": "Weather updates and warnings",
+        "highways": "Highway emergencies and assistance"
+      },
+      "saveNumbers": "Save these numbers in your phone for quick access during emergencies",
+      "callNow": "Call Now"
+    }
+  },
+  "analytics": {
+    "title": "Analytics",
+    "subtitle": "View detailed analytics and insights",
+    "overview": "Overview",
+    "reports": "Reports",
+    "users": "Users",
+    "responseTime": "Response Time",
+    "severityDistribution": "Severity Distribution",
+    "trends": "Trends",
+    "geographicDistribution": "Geographic Distribution",
+    "timeRange": "Time Range",
+    "last7Days": "Last 7 Days",
+    "last30Days": "Last 30 Days",
+    "last90Days": "Last 90 Days",
+    "custom": "Custom",
+    "exportData": "Export Data",
+    "noData": "No data available for selected period"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "subtitle": "Stay updated with latest alerts",
+    "markAllRead": "Mark All as Read",
+    "noNotifications": "No notifications",
+    "newReport": "New Report",
+    "reportVerified": "Report Verified",
+    "reportResolved": "Report Resolved",
+    "systemAlert": "System Alert",
+    "weatherAlert": "Weather Alert",
+    "emergencyAlert": "Emergency Alert"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot Password?",
+    "rememberMe": "Remember Me",
+    "dontHaveAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "loginSuccess": "Login successful",
+    "loginError": "Login failed",
+    "registerSuccess": "Registration successful",
+    "registerError": "Registration failed",
+    "logoutSuccess": "Logout successful",
+    "invalidCredentials": "Invalid credentials",
+    "emailRequired": "Email is required",
+    "passwordRequired": "Password is required",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "passwordsDoNotMatch": "Passwords do not match"
+  },
+  "errors": {
+    "networkError": "Network error. Please check your connection.",
+    "serverError": "Server error. Please try again later.",
+    "unauthorized": "Unauthorized access. Please login.",
+    "forbidden": "Access forbidden.",
+    "notFound": "Resource not found.",
+    "validationError": "Please check your input and try again.",
+    "unknownError": "An unknown error occurred."
+  },
+  "postFeed": {
+    "loadingReports": "Loading reports...",
+    "noReportsFound": "No reports found",
+    "tryAdjustingSearch": "Try adjusting your search terms or category filter",
+    "votes": "votes",
+    "comments": "comments",
+    "views": "views",
+    "justNow": "Just now",
+    "minutesAgo": "m ago",
+    "hoursAgo": "h ago",
+    "daysAgo": "d ago"
+  },
+  "disasterInfo": {
+    "title": "Disaster Information",
+    "subtitle": "Emergency guidelines, safety tips, and preparedness information",
+    "downloadGuide": "Download Emergency Guide",
+    "tabs": {
+      "disasterTypes": "Disaster Types",
+      "emergencyKit": "Emergency Kit",
+      "evacuation": "Evacuation Centers",
+      "contacts": "Emergency Contacts"
+    },
+    "disasterTypes": {
+      "tsunami": {
+        "name": "Tsunami",
+        "description": "Large ocean waves caused by underwater earthquakes or landslides",
+        "warningSigns": "Warning Signs",
+        "safetyTips": "Safety Tips",
+        "warningSignsList": [
+          "Strong earthquake lasting 20+ seconds",
+          "Ocean water receding unusually far",
+          "Loud roaring sound from ocean",
+          "Unusual animal behavior"
+        ],
+        "safetyTipsList": [
+          "Move to higher ground immediately",
+          "Stay away from beaches and coastal areas",
+          "Listen to emergency broadcasts",
+          "Do not return until all-clear is given"
+        ]
+      },
+      "cyclone": {
+        "name": "Cyclone",
+        "description": "Rotating storm system with strong winds and heavy rainfall",
+        "warningSignsList": [
+          "Rapidly dropping barometric pressure",
+          "Increasing wind speeds",
+          "Heavy rainfall",
+          "Dark, threatening clouds"
+        ],
+        "safetyTipsList": [
+          "Stay indoors and away from windows",
+          "Secure loose outdoor objects",
+          "Stock up on emergency supplies",
+          "Follow evacuation orders if issued"
+        ]
+      },
+      "flood": {
+        "name": "Coastal Flooding",
+        "description": "Water overflow from ocean or rivers into normally dry areas",
+        "warningSignsList": [
+          "Rising water levels",
+          "Heavy or prolonged rainfall",
+          "Dam or levee failure warnings",
+          "Storm surge alerts"
+        ],
+        "safetyTipsList": [
+          "Move to higher ground",
+          "Avoid walking or driving through flood water",
+          "Stay informed via radio or mobile alerts",
+          "Turn off utilities if instructed"
+        ]
+      },
+      "oilSpill": {
+        "name": "Oil Spill",
+        "description": "Release of petroleum products into ocean or coastal environment",
+        "warningSignsList": [
+          "Oil sheen on water surface",
+          "Strong petroleum odor",
+          "Dead fish or marine life",
+          "Oil on beaches or shoreline"
+        ],
+        "safetyTipsList": [
+          "Avoid contact with oil or contaminated water",
+          "Report spills to authorities immediately",
+          "Keep pets and children away from affected areas",
+          "Use protective equipment if helping cleanup"
+        ]
+      }
+    },
+    "emergencyKit": {
+      "title": "Emergency Kit Checklist",
+      "subtitle": "Prepare these essential items for emergency situations",
+      "categories": {
+        "waterFood": "Water & Food",
+        "safetyTools": "Safety & Tools",
+        "personalItems": "Personal Items",
+        "clothing": "Clothing"
+      },
+      "items": {
+        "waterFood": [
+          "1 gallon water per person per day",
+          "Non-perishable food (3-day supply)",
+          "Manual can opener",
+          "Disposable plates/utensils"
+        ],
+        "safetyTools": [
+          "Flashlight with extra batteries",
+          "Battery-powered radio",
+          "First aid kit",
+          "Whistle for signaling"
+        ],
+        "personalItems": [
+          "Prescription medications",
+          "Personal hygiene items",
+          "Cash in small bills",
+          "Important documents (copies)"
+        ],
+        "clothing": [
+          "Weather-appropriate clothing",
+          "Blankets or sleeping bags",
+          "Rain gear",
+          "Sturdy shoes"
+        ]
+      },
+      "importantReminder": "Important Reminder",
+      "reminderText": "Check and update your emergency kit every 6 months. Replace expired items and update documents."
+    },
+    "evacuation": {
+      "searchPlaceholder": "Search evacuation centers by name or location...",
+      "evacuationTips": "Evacuation Tips",
+      "tips": [
+        "Know multiple routes to evacuation centers",
+        "Keep your emergency kit ready to go",
+        "Follow official evacuation orders immediately",
+        "Register with center staff upon arrival"
+      ],
+      "capacity": "Capacity",
+      "distance": "Distance",
+      "getDirections": "Get Directions",
+      "contact": "Contact"
+    },
+    "emergencyContacts": {
+      "nationalEmergency": "National Emergency",
+      "coastGuard": "Coast Guard",
+      "disasterManagement": "Disaster Management",
+      "additionalContacts": "Additional Emergency Contacts",
+      "singleEmergencyNumber": "Single emergency number for all services",
+      "marineEmergencies": "Marine emergencies & rescue",
+      "disasterResponse": "Disaster response coordination",
+      "contacts": {
+        "fireRescue": "Fire & Rescue Services",
+        "police": "Police Emergency",
+        "medical": "Medical Emergency",
+        "pollutionControl": "Pollution Control Board",
+        "meteorological": "Meteorological Department",
+        "highways": "National Highways Authority"
+      },
+      "descriptions": {
+        "fireRescue": "Fire emergencies and rescue operations",
+        "police": "Law enforcement and security",
+        "medical": "Ambulance and medical assistance",
+        "pollutionControl": "Environmental emergencies",
+        "meteorological": "Weather updates and warnings",
+        "highways": "Highway emergencies and assistance"
+      },
+      "saveNumbers": "Save these numbers in your phone for quick access during emergencies",
+      "callNow": "Call Now"
+    }
+  },
+  "reports": {
+    "title": "Disaster Reports",
+    "subtitle": "Report and track disaster incidents",
+    "createReport": "Create Report",
+    "reportType": "Report Type",
+    "severity": "Severity",
+    "location": "Location",
+    "description": "Description",
+    "photos": "Photos",
+    "contactInfo": "Contact Information",
+    "anonymous": "Anonymous Report",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low",
+    "critical": "Critical",
+    "flood": "Flood",
+    "earthquake": "Earthquake",
+    "fire": "Fire",
+    "storm": "Storm",
+    "other": "Other",
+    "selectType": "Select disaster type",
+    "selectSeverity": "Select severity level",
+    "enterDescription": "Enter description...",
+    "addPhotos": "Add photos",
+    "submitReport": "Submit Report",
+    "reportSubmitted": "Report submitted successfully",
+    "reportError": "Error submitting report",
+    "noReports": "No reports found",
+    "filterBy": "Filter by",
+    "sortBy": "Sort by",
+    "date": "Date",
+    "severityLevel": "Severity Level",
+    "status": "Status",
+    "verified": "Verified",
+    "pending": "Pending",
+    "resolved": "Resolved",
+    "rejected": "Rejected",
+    "searchPlaceholder": "Search reports...",
+    "allSeverities": "All Severities",
+    "allStatuses": "All Statuses",
+    "sortOptions": {
+      "newest": "Newest First",
+      "oldest": "Oldest First",
+      "severityHigh": "High Severity First",
+      "severityLow": "Low Severity First"
+    }
+  },
+  "reportModal": {
+    "title": "Report Disaster",
+    "subtitle": "Submit a detailed report about a disaster or emergency situation. All fields marked with * are required.",
+    "disasterInformation": "Disaster Information",
+    "locationInformation": "Location Information",
+    "mediaUpload": "Media Upload (Optional)",
+    "reportTitle": "Report Title *",
+    "reportTitlePlaceholder": "Brief title describing the situation",
+    "disasterType": "Disaster Type *",
+    "selectDisasterType": "Select disaster type",
+    "severityLevel": "Severity Level *",
+    "selectSeverity": "Select severity",
+    "description": "Description *",
+    "descriptionPlaceholder": "Provide detailed description of the situation, including what you observed, when it started, and any immediate dangers...",
+    "locationAddress": "Location/Address",
+    "locationPlaceholder": "City, State or specific address",
+    "gpsCoordinates": "GPS Coordinates *",
+    "getCurrentLocation": "Get Current Location",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "latitudePlaceholder": "e.g., 40.7128",
+    "longitudePlaceholder": "e.g., -74.0060",
+    "coordinatesNote": "Required: Enter coordinates manually or use the \"Get Current Location\" button to automatically detect your position. This will help us display your report on the map.",
+    "coordinatesBoundaryNote": "Note: Coordinates must be within India boundaries (6-37°N, 68-97°E).",
+    "dropFilesHere": "Drop files here or click to upload",
+    "supportedFormats": "Images (JPEG, PNG, WebP) or Videos (MP4, MOV) up to 10MB",
+    "chooseFile": "Choose File",
+    "cancel": "Cancel",
+    "submitReport": "Submit Report",
+    "submitting": "Submitting...",
+    "validation": {
+      "fillRequiredFields": "Please fill in all required fields",
+      "enterLocation": "Please enter a location/address for your report",
+      "provideCoordinates": "Please provide GPS coordinates by clicking \"Get Current Location\" or entering them manually",
+      "validCoordinates": "Please enter valid GPS coordinates",
+      "coordinatesWithinIndia": "Coordinates must be within India boundaries (6-37°N, 68-97°E). Please check your location.",
+      "loginRequired": "Please log in to submit a report",
+      "fileSizeLimit": "File size must be less than 10MB",
+      "invalidFileType": "Please upload an image (JPEG, PNG, WebP) or video (MP4, MOV)",
+      "locationCaptured": "Location captured successfully",
+      "locationError": "Unable to get your location. Please enter manually.",
+      "geolocationNotSupported": "Geolocation is not supported by this browser",
+      "reportSubmittedSuccess": "Report submitted successfully! Our team will review it shortly.",
+      "reportSubmitError": "Failed to submit report"
+    }
+  },
+  "map": {
+    "title": "Live Map",
+    "subtitle": "Real-time disaster reports and incidents",
+    "legend": "Legend",
+    "highSeverity": "High Severity",
+    "mediumSeverity": "Medium Severity",
+    "lowSeverity": "Low Severity",
+    "criticalSeverity": "Critical Severity",
+    "verified": "Verified",
+    "unverified": "Unverified",
+    "myLocation": "My Location",
+    "searchLocation": "Search location...",
+    "noReports": "No reports in this area",
+    "loadingMap": "Loading map...",
+    "mapError": "Error loading map",
+    "filterBySeverity": "Filter by severity",
+    "filterByStatus": "Filter by status",
+    "allSeverities": "All Severities",
+    "allStatuses": "All Statuses"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "subtitle": "Manage users and system settings",
+    "userManagement": "User Management",
+    "systemSettings": "System Settings",
+    "reportsManagement": "Reports Management",
+    "analytics": "Analytics",
+    "users": "Users",
+    "roles": "Roles",
+    "permissions": "Permissions",
+    "settings": "Settings",
+    "backup": "Backup",
+    "logs": "Logs",
+    "addUser": "Add User",
+    "editUser": "Edit User",
+    "deleteUser": "Delete User",
+    "userRole": "User Role",
+    "admin": "Admin",
+    "moderator": "Moderator",
+    "user": "User",
+    "active": "Active",
+    "inactive": "Inactive",
+    "lastLogin": "Last Login",
+    "createdAt": "Created At",
+    "filterBySeverity": "Filter by severity",
+    "filterByStatus": "Filter by status",
+    "filterByLocation": "Filter by location",
+    "allSeverities": "All Severities",
+    "allStatuses": "All Statuses",
+    "allLocations": "All Locations",
+    "blockUser": "Block user",
+    "unblockUser": "Unblock user",
+    "deleteUserConfirm": "Are you sure you want to delete this user?",
+    "userBlocked": "User has been blocked",
+    "userUnblocked": "User has been unblocked",
+    "userDeleted": "User has been deleted"
+  },
+  "loginModal": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "phoneNumber": "Phone Number",
+    "fullName": "Full Name",
+    "emailPlaceholder": "Enter your email",
+    "phonePlaceholder": "Enter your phone number",
+    "passwordPlaceholder": "Enter your password",
+    "forgotPassword": "Forgot Password?",
+    "rememberMe": "Remember Me",
+    "dontHaveAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "loginSuccess": "Login successful",
+    "loginError": "Login failed",
+    "registerSuccess": "Registration successful",
+    "registerError": "Registration failed",
+    "invalidCredentials": "Invalid credentials",
+    "emailRequired": "Email is required",
+    "passwordRequired": "Password is required",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "phoneRequired": "Phone number is required",
+    "nameRequired": "Full name is required"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "liveMap": "Live Map",
+    "disasterInfo": "Disaster Info",
+    "faq": "FAQ",
+    "profile": "Profile",
+    "reports": "Reports",
+    "analytics": "Analytics",
+    "map": "Map",
+    "admin": "Admin",
+    "login": "Login",
+    "logout": "Logout",
+    "reportDisaster": "Report Disaster",
+    "communitySafety": "Community Safety",
+    "goToProfile": "Go to Profile",
+    "user": "User"
+  },
+  "timeAgo": {
+    "justNow": "Just now",
+    "minutesAgo": "m ago",
+    "hoursAgo": "h ago",
+    "daysAgo": "d ago",
+    "weeksAgo": "w ago",
+    "monthsAgo": "mo ago",
+    "yearsAgo": "y ago"
+  },
+  "infoCards": {
+    "floodSafety": {
+      "title": "Flood Safety Guidelines",
+      "category": "SAFETY",
+      "content": "Move to higher ground immediately. Avoid walking or driving through flood waters.",
+      "action": "Read More",
+      "description": "Flooding is one of the most common natural disasters and can occur with little warning. Being prepared and knowing what to do can save your life.",
+      "keySteps": [
+        "Move to higher ground immediately - do not wait for instructions",
+        "Avoid walking or driving through flood waters - just 6 inches of moving water can knock you down",
+        "Stay away from bridges over fast-moving water",
+        "Turn around, don't drown - find an alternative route",
+        "If trapped in a building, go to the highest floor but avoid closed attics"
+      ],
+      "warningSigns": [
+        "Rising water levels in nearby streams or rivers",
+        "Heavy or prolonged rainfall",
+        "Dam or levee failure warnings",
+        "Storm surge alerts for coastal areas"
+      ],
+      "emergencyNumbers": [
+        "National Emergency: 112",
+        "Flood Control: 1077",
+        "Fire & Rescue: 101",
+        "Local Emergency: 100"
+      ]
+    },
+    "emergencyContacts": {
+      "title": "Emergency Contacts",
+      "category": "ALERT",
+      "content": "National Emergency: 112 | Coast Guard: 1554 | Local Authority: 100",
+      "action": "View All",
+      "description": "Keep these emergency numbers handy and program them into your phone for quick access during disasters.",
+      "emergencyNumbers": [
+        { "name": "National Emergency", "number": "112", "description": "All emergency services" },
+        { "name": "Coast Guard", "number": "1554", "description": "Maritime emergencies" },
+        { "name": "Local Authority", "number": "100", "description": "Police and local services" },
+        { "name": "Fire & Rescue", "number": "101", "description": "Fire and rescue services" },
+        { "name": "Medical Emergency", "number": "108", "description": "Ambulance services" },
+        { "name": "Disaster Management", "number": "1078", "description": "Disaster response coordination" }
+      ],
+      "tips": [
+        "Save all numbers in your phone contacts",
+        "Keep a physical list in case phone battery dies",
+        "Teach children these numbers",
+        "Test numbers periodically to ensure they work"
+      ]
+    },
+    "emergencyKit": {
+      "title": "Emergency Kit Checklist",
+      "category": "INFO",
+      "content": "Water, food, flashlight, radio, batteries, first aid kit, medications.",
+      "action": "Download",
+      "description": "A well-stocked emergency kit can be a lifesaver during disasters. Keep it in an easily accessible location and check it regularly.",
+      "essentials": [
+        { "category": "Water & Food", "items": ["1 gallon water per person per day (3-day supply)", "Non-perishable food (3-day supply)", "Manual can opener", "Pet food if applicable"] },
+        { "category": "Light & Communication", "items": ["Flashlight with extra batteries", "Battery-powered or hand-crank radio", "Cell phone with charger", "Whistle to signal for help"] },
+        { "category": "First Aid & Health", "items": ["First aid kit", "Prescription medications (7-day supply)", "Medical supplies (glasses, hearing aids)", "Sanitation and hygiene items"] },
+        { "category": "Tools & Safety", "items": ["Multi-purpose tool", "Duct tape", "Plastic sheeting", "Dust masks", "Work gloves"] },
+        { "category": "Important Documents", "items": ["Copies of insurance policies", "ID and bank account records", "Emergency contact information", "Map of local area"] }
+      ],
+      "additionalTips": [
+        "Store items in airtight plastic bags",
+        "Check expiration dates every 6 months",
+        "Consider special needs for elderly or disabled family members",
+        "Keep a smaller kit in your car"
+      ]
+    },
+    "evacuationRoutes": {
+      "title": "Evacuation Routes",
+      "category": "SAFETY",
+      "content": "Know your nearest evacuation center and multiple routes to reach it.",
+      "action": "View Map",
+      "description": "Planning evacuation routes in advance is crucial for your safety. Know multiple ways to reach safety from your home, workplace, and other frequented locations.",
+      "planningSteps": [
+        "Identify evacuation centers in your area",
+        "Plan multiple routes to each center",
+        "Consider different types of disasters (flood, fire, earthquake)",
+        "Practice evacuation routes with family members",
+        "Keep maps in your emergency kit"
+      ],
+      "evacuationCenters": [
+        { "name": "Community Center Main", "address": "123 Main St, Downtown", "distance": "2.1 km", "capacity": "500 people" },
+        { "name": "High School Gymnasium", "address": "456 School Ave, North District", "distance": "3.5 km", "capacity": "800 people" },
+        { "name": "Sports Complex", "address": "789 Sports Blvd, East Side", "distance": "4.2 km", "capacity": "1200 people" },
+        { "name": "Community Church", "address": "321 Faith St, West District", "distance": "2.8 km", "capacity": "300 people" }
+      ],
+      "importantNotes": [
+        "Follow official evacuation orders immediately",
+        "Take your emergency kit with you",
+        "Turn off utilities if instructed",
+        "Lock your home but don't delay evacuation",
+        "Use designated evacuation routes only"
+      ]
+    }
+  }
+}
